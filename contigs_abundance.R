@@ -137,7 +137,7 @@ for (x in c('picobirna', 'tombus_like')) {
 par(new=TRUE, mar=rep(0, 4))
 layout(matrix(1))
 plot(NA, xlim=c(0, 18), ylim=c(0, 1), xaxs='i', yaxs='i', axes=FALSE, ann=FALSE)
-text(x=c(0.75, 13.5), y=0.95, labels=c('A', 'B'), cex=2.25)
+text(x=c(0.75, 13.5), y=0.95, labels=c('A', 'B'), cex=1.5, font=2)
 
 
 dev.off()
