@@ -90,17 +90,19 @@ plot_contigs_abundance <- function (M,
 	}
 
 	# legend
-	rasterImage(
-		image = as.raster(matrix(pal$col, nrow = 1)),
-		xleft = 0,
-		xright = ncol(M),
-		ybottom = Y[length(Y)] + 3,
-		ytop = Y[length(Y)] + 2
-	)
+    X <- seq(from = 0, to = ncol(M), length = length(brackets))
+    rect(
+        xleft = X[-length(X)],
+        xright = X[-1],
+        ybottom = Y[length(Y)] + 3,
+        ytop = Y[length(Y)] + 2,
+        col = pal$col,
+        border = NA
+    )
 
 	text(
 		labels = format(brackets_lab, scientific = FALSE),
-		x = seq(from = 0, to = ncol(M), length.out = length(brackets_lab)),
+		x = X[which(brackets %in% brackets_lab)],
 		y = Y[length(Y)] + 3 + y_shift,
 		adj = 1,
 		srt = 90,

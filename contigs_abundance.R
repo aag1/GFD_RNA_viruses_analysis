@@ -1,5 +1,5 @@
 ### R libraries
-.libPaths('/groups/umcg-lld/tmp03/umcg-agulyaeva/R_LIB')
+.libPaths('/groups/umcg-tifn/tmp01/users/umcg-agulyaeva/SOFTWARE/R_LIB')
 library('optparse')
 sessionInfo()
 
@@ -7,7 +7,6 @@ sessionInfo()
 
 ### R functions
 source('function_plot_contigs_abundance.R')
-plot_contigs_abundance
 
 
 
@@ -106,12 +105,12 @@ for (x in c('picobirna', 'tombus_like')) {
 
     if (x=='picobirna')   {
                             par(mar = c(2, 3, 8, 3))
-                            BR <- c(0, 10^seq(1, 3, 0.06))
-                            BRL <- c(0, 10^seq(1, 3, 1))
+                            BR <- c(0, 10^seq(0, 5, 0.1))
+                            BRL <- c(0, 10^seq(1, 5, 1))
     }
     if (x=='tombus_like') {
                             par(mar = c(2, 0, 8, 1))
-                            BR <- c(0, 10^seq(1, 5, 0.1))
+                            BR <- c(0, 10^seq(0, 5, 0.1))
                             BRL <- c(0, 10^seq(1, 5, 1))
     }
 
